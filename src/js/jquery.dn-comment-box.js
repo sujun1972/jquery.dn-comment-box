@@ -7,8 +7,7 @@ if ( typeof Object.create !== 'function' ) {
 }
 
 (function( $, window, document, undefined ) {
-
-    var DnCommentBox = {
+     var DnCommentBox = {
         init: function( options, elem ) {
             var self = this;
             self.elem = elem;
@@ -20,7 +19,8 @@ if ( typeof Object.create !== 'function' ) {
                 .addClass('dcb-'+self.options.position)
                 .addClass('dcb-'+self.options.style)
                 .appendTo('body')
-                .append('<div class="dcb-controls"><input type="text" placeholder="发表评论"/><button class="submit-comment">发表</button></div>')
+                .append('<div class="dcb-controls"><input class="comment-input" type="text" placeholder="发表评论"/><button class="submit-comment">发表</button><div class="faces-triggler"></div></div>')
+                .append('<div class="face-selector"></div>')
                 //.hide();
             self.initializeDnCommentBox();
         },
@@ -37,11 +37,18 @@ if ( typeof Object.create !== 'function' ) {
             // self.populateContent();
             self.setTrigger();
         },
-
         setTrigger: function() {
             var self = this;
+            //var facesTriggler = self.find('.face-triggler');
+            //console.log(self);
             if (self.options.event != 'click') {
             }
+            $(".faces-triggler").click(function(){
+                alert("a");
+            })
+        },
+        showFaceSelector: function() {
+
         }
     }
 
