@@ -20,7 +20,7 @@ if ( typeof Object.create !== 'function' ) {
                 .addClass('dcb-'+self.options.style)
                 .appendTo('body')
                 .append('<div class="dcb-controls"><input class="comment-input" type="text" placeholder="发表评论"/><button class="submit-comment">发表</button><div class="faces-triggler"></div></div>')
-                .append('<div class="face-selector"></div>')
+                .append('<div class="selector-content"></div>');
                 //.hide();
             self.initializeDnCommentBox();
         },
@@ -34,21 +34,25 @@ if ( typeof Object.create !== 'function' ) {
         },
         initializeDnCommentBox: function() {
             var self = this;
-            // self.populateContent();
+            self.populateContent();
             self.setTrigger();
+        },
+        populateContent: function() {
+            // 填充selector-content中的内容
+            selectorContent = $(".selector-content");
+            selectorContent.append('<div class="face-selector"><div class="selector-tab"><div class="tablink active" onclick="openCity(event, \'Tokyo\')">Smile</div></div>');
         },
         setTrigger: function() {
             var self = this;
-            //var facesTriggler = self.find('.face-triggler');
-            //console.log(self);
             if (self.options.event != 'click') {
             }
+
             $(".faces-triggler").click(function(){
-                alert("a");
+                self.triggerFaceSelector();
             })
         },
-        showFaceSelector: function() {
-
+        triggerFaceSelector: function() {
+            $('.face-selector').slideToggle();
         }
     }
 

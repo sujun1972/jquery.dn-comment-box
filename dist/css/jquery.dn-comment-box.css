@@ -3,7 +3,7 @@ div {
 
 .dcb-container {
   position: fixed;
-  padding: 10px 5px;
+  padding: 5px 5px;
   width: 100%; }
 
 .dcb-bottom {
@@ -14,12 +14,10 @@ div {
   -webkit-box-shadow: 0px -2px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px -2px 5px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px -2px 5px 0px rgba(0, 0, 0, 0.75);
-  height: 50px;
+  border: 1px solid #999;
   width: 100%; }
 
 .dcb-controls {
-  background-color: #ddd;
-  height: 30px;
   width: 100%;
   padding-right: 100px;
   position: relative; }
@@ -57,3 +55,23 @@ div {
   top: 0;
   right: 62px;
   background-image: url(data:image/png;base64,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); }
+
+.face-selector {
+  margin-top: 5px;
+  height: 160px;
+  border: 1px solid #ddd;
+  position: relative; }
+  .face-selector .selector-tab {
+    position: absolute;
+    height: 36px;
+    width: 100%;
+    bottom: 0;
+    background-color: #ededed; }
+  .face-selector .tablink {
+    display: inline-block;
+    height: 100%;
+    padding: 5px 12px;
+    line-height: 26px;
+    vertical-align: middle; }
+    .face-selector .tablink.active {
+      background-color: #fff; }
